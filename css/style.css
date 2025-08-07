@@ -36,6 +36,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 1rem;
+    padding-top: 120px; /* ヘッダーの高さに合わせて調整 */
 }
 
 /* ギャラリー */
