@@ -16,39 +16,39 @@
 
     <main>
         <section class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 1" data-description="美しいポートレート写真です。自然光を活かした撮影で、被写体の魅力を最大限に引き出しています。プロフェッショナルな仕上がりで、様々な用途にご利用いただけます。" data-image="images/gallery-1.jpg">
                 <img src="images/gallery-1.jpg" alt="Gallery Image 1">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 2" data-description="スタイリッシュなポートレート写真です。モダンな雰囲気と洗練されたライティングが特徴的な作品です。ビジネスシーンからカジュアルまで幅広く対応できます。" data-image="images/gallery-2.jpg">
                 <img src="images/gallery-2.jpg" alt="Gallery Image 2">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 3" data-description="エレガントなポートレート写真です。被写体の個性と魅力を丁寧に表現した作品です。高品質な仕上がりで、特別な瞬間を美しく記録しています。" data-image="images/gallery-3.jpg">
                 <img src="images/gallery-3.jpg" alt="Gallery Image 3">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 4" data-description="クリエイティブなポートレート写真です。独創的な構図と表現で、印象的な作品に仕上がっています。アーティスティックな要素も取り入れた特別な一枚です。" data-image="images/gallery-1.jpg">
                 <img src="images/gallery-1.jpg" alt="Gallery Image 4">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 5" data-description="ナチュラルなポートレート写真です。自然な表情と雰囲気を大切にした撮影スタイルです。リラックスした環境で撮影された、温かみのある作品です。" data-image="images/gallery-2.jpg">
                 <img src="images/gallery-2.jpg" alt="Gallery Image 5">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 6" data-description="プロフェッショナルなポートレート写真です。技術的な完成度と芸術性を兼ね備えた作品です。商業利用からパーソナルユースまで対応可能です。" data-image="images/gallery-3.jpg">
                 <img src="images/gallery-3.jpg" alt="Gallery Image 6">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 7" data-description="ドラマティックなポートレート写真です。光と影を効果的に使用した印象的な作品です。被写体の内面的な美しさも表現した深みのある一枚です。" data-image="images/gallery-1.jpg">
                 <img src="images/gallery-1.jpg" alt="Gallery Image 7">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 8" data-description="コンテンポラリーなポートレート写真です。現代的な感性と技術を融合させた作品です。トレンドを意識しながらも時代を超えた美しさを追求しています。" data-image="images/gallery-2.jpg">
                 <img src="images/gallery-2.jpg" alt="Gallery Image 8">
                 <p>なまえデモテキスト</p>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-title="ポートレート 9" data-description="アーティスティックなポートレート写真です。創造性と技術力を結集した特別な作品です。見る人に強い印象を与える、記憶に残る一枚となっています。" data-image="images/gallery-3.jpg">
                 <img src="images/gallery-3.jpg" alt="Gallery Image 9">
                 <p>なまえデモテキスト</p>
             </div>
@@ -58,6 +58,19 @@
     <footer>
         <p>&copy; 2023 New Grid T</p>
     </footer>
+
+    <!-- モーダルオーバーレイ -->
+    <div id="modal-overlay" class="modal-overlay">
+        <!-- モーダルコンテンツ -->
+        <div class="modal-content">
+            <button id="modal-close-button" class="modal-close-button">&times;</button>
+            <img id="modal-image" src="" alt="Modal Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
 
