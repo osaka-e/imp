@@ -16,7 +16,7 @@ body {
 /* ヘッダー */
 header {
     background-color: #fff;
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
@@ -36,7 +36,23 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 1rem;
-    padding-top: 120px; /* ヘッダーの高さに合わせて調整 */
+    padding-top: 80px; /* ← ヘッダーの高さに合わせて調整 */
+}
+
+/* レスポンシブ（768px以下） */
+@media (max-width: 768px) {
+    main {
+        padding: 2rem 1rem;
+        padding-top: 70px; /* ← こちらも調整 */
+    }
+}
+
+/* レスポンシブ（480px以下） */
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem 0.5rem;
+        padding-top: 60px; /* ← よりコンパクトに */
+    }
 }
 
 /* ギャラリー */
