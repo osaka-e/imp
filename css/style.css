@@ -19,6 +19,10 @@ header {
     padding: 2rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .logo img {
@@ -365,6 +369,24 @@ footer p {
 
 .shop-button:hover {
     background-color: #0056b3;
+}
+
+
+
+
+/* フッターのショップアイコン */
+.shop-footer-icon {
+    margin-bottom: 10px;
+}
+
+.shop-footer-icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.shop-footer-icon img:hover {
+    transform: scale(1.1);
 }
 
 
