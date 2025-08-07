@@ -198,17 +198,25 @@ footer p {
     margin-top: 10px;
 }
 
+/* モーダル内の画像を縦長にするための追加スタイル */
 .modal-image-container {
-    flex: 0 0 45%;
+    flex: 0 0 30%; /* 画像コンテナの幅を調整 */
     min-width: 0;
+    height: 400px; /* 縦長にするための固定高さ */
 }
 
 #modal-image {
     width: 100%;
-    height: auto;
+    height: 100%; /* 親要素の高さに合わせる */
+    object-fit: cover; /* 画像がコンテナに収まるように調整 */
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .modal-image-container {
+        height: 300px; /* モバイルでの高さ調整 */
+    }
 }
 
 .modal-text-content {
@@ -282,4 +290,81 @@ footer p {
         font-size: 24px;
     }
 }
+
+
+
+/* モーダル内の画像を縦長にするための追加スタイル */
+.modal-image-container {
+    flex: 0 0 30%; /* 画像コンテナの幅を調整 */
+    min-width: 0;
+    height: 400px; /* 縦長にするための固定高さ */
+}
+
+#modal-image {
+    width: 100%;
+    height: 100%; /* 親要素の高さに合わせる */
+    object-fit: cover; /* 画像がコンテナに収まるように調整 */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .modal-image-container {
+        height: 300px; /* モバイルでの高さ調整 */
+    }
+}
+
+
+
+
+/* SNSアイコンとショップボタンのスタイル */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background-color: #ddd;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.shop-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #0056b3;
+}
+
 
