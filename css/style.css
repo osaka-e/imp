@@ -36,7 +36,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 1rem;
-    padding-top: 80px; /* ← ヘッダーの高さに合わせて調整 */
+    padding-top: 100px; /* ← ヘッダーの高さに合わせて調整 */
 }
 
 /* レスポンシブ（768px以下） */
