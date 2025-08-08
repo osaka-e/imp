@@ -454,17 +454,11 @@ footer p {
     stroke: var(--shop-text-hover);
 }
 
-/* モーダル内のSNSアイコン下にSHOPボタンを配置 */
+/* SNSアイコンの下にSHOPボタンを配置（安全版） */
 .modal-content .shop-button-container {
-    margin-top: 1rem; /* SNSアイコンとの間隔 */
-    text-align: center; /* 中央揃え */
-}
-
-/* 小型ボタンとバランスを取るための微調整 */
-.modal-content .shop-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1rem;         
+    display: flex;           
+    justify-content: center;  
 }
 
 /* サイズバリエーション */
