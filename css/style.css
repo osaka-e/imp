@@ -50,12 +50,15 @@ main {
 /* レスポンシブ（480px以下） */
 @media (max-width: 480px) {
     main {
-        padding: 1.5rem 0.5rem;
         padding-top: 60px;
     }
     header {
         padding: 0.25rem 0;
         height: 50px; 
+    }
+    .logo img {
+        width: 40px;
+        height: 40px;
     }
 }
 
