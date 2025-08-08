@@ -49,18 +49,22 @@ main {
 
 /* レスポンシブ（480px以下） */
 @media (max-width: 480px) {
+    header {
+        padding: 0; 
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     main {
         padding-top: 60px;
-    }
-    header {
-        padding: 0.25rem 0;
-        height: 50px; 
     }
     .logo img {
         width: 40px;
         height: 40px;
     }
 }
+
 
 /* ギャラリー */
 .gallery {
