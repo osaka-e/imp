@@ -475,6 +475,28 @@ footer p {
     font-size: 1.25rem;
 }
 
+/* モーダル専用小型SHOPボタン */
+.modal-content .shop-button {
+    width: 7rem;   /* 112px */
+    height: 2.2rem; /* 35px */
+    font-size: 14px;
+}
+
+/* 矢印と文字サイズをバランス調整 */
+.modal-content .shop-button .shop-button-text {
+    font-size: 14px;
+    left: 0.4rem; /* 文字を少し左寄せ */
+}
+
+.modal-content .shop-button .shop-button-arrow {
+    width: 1.5rem;  /* 小型化 */
+    height: 1.5rem;
+}
+
+.modal-content .shop-button .shop-button-line {
+    height: 1.5rem;
+}
+
 /* フッターのショップアイコン */
 .shop-footer-icon {
     margin-bottom: 10px;
