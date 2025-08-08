@@ -335,9 +335,6 @@ footer p {
     }
 }
 
-
-
-
 /* SNSアイコンとショップボタンのスタイル */
 .social-links {
     display: flex;
@@ -368,28 +365,141 @@ footer p {
     height: 24px;
 }
 
-.shop-button-container {
-    text-align: center;
-    margin-top: 20px;
+:root {
+    --shop-bg: #d9d9d9;
+    --shop-bg-hover: #000;
+    --shop-text: #000;
+    --shop-text-hover: #d9d9d9;
+    --transition-speed: 0.25s;
 }
 
 .shop-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #007bff;
-    color: #fff;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .shop-button:hover {
-    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 
+                0 8px 10px -6px rgba(0,0,0,0.1);
 }
 
+.shop-button-background,
+.shop-button-border {
+    position: absolute;
+    inset: 0;
+    transition: background-color var(--transition-speed) ease;
+}
 
+.shop-button-background {
+    background-color: var(--shop-bg);
+}
 
+.shop-button-border {
+    border: 1px solid var(--shop-text);
+    pointer-events: none;
+}
+
+.shop-button-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    color: var(--shop-text);
+    transition: color var(--transition-speed) ease;
+}
+
+.shop-button-arrow {
+    position: absolute;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 1;
+}
+
+.shop-button-arrow svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform var(--transition-speed) ease;
+}
+
+.shop-button-arrow path {
+    stroke: var(--shop-text);
+    transition: stroke var(--transition-speed) ease;
+}
+
+.shop-button:hover .shop-button-background {
+    background-color: var(--shop-bg-hover);
+}
+
+.shop-button:hover .shop-button-text {
+    color: var(--shop-text-hover);
+}
+
+.shop-button:hover .shop-button-arrow svg {
+    transform: translateX(0.25rem);
+}
+
+.shop-button:hover .shop-button-arrow path {
+    stroke: var(--shop-text-hover);
+}
+
+/* SNSアイコンの下にSHOPボタンを配置（安全版） */
+.modal-content .shop-button-container {
+    margin-top: 1rem;         
+    display: flex;           
+    justify-content: center;  
+}
+
+/* サイズバリエーション */
+.shop-button-default {
+    width: 12rem;
+    height: 4rem;
+}
+
+.shop-button-large {
+    width: 16rem;
+    height: 5rem;
+    font-size: 1.75rem;
+}
+
+.shop-button-small {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.25rem;
+}
+
+/* モーダル専用小型SHOPボタン */
+.modal-content .shop-button {
+    width: 7rem;   /* 112px */
+    height: 2.2rem; /* 35px */
+    font-size: 14px;
+}
+
+/* 矢印と文字サイズをバランス調整 */
+.modal-content .shop-button .shop-button-text {
+    font-size: 14px;
+    left: 0.4rem; /* 文字を少し左寄せ */
+}
+
+.modal-content .shop-button .shop-button-arrow {
+    width: 1.5rem;  /* 小型化 */
+    height: 1.5rem;
+}
+
+.modal-content .shop-button .shop-button-line {
+    height: 1.5rem;
+}
 
 /* フッターのショップアイコン */
 .shop-footer-icon {
@@ -406,4 +516,20 @@ footer p {
     transform: scale(1.1);
 }
 
+/* 3. スマホサイズ（480px以下）でも縦長固定 */
+@media (max-width: 480px) {
+    .modal-image-container {
+        flex: none;
+        width: auto;
+        height: 300px; /* 高さ固定 */
+        min-width: 200px; /* 最低横幅を指定 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+
+    #modal-image {
+        width: auto;
+        height: 100%;
+        object-fit: contain; /* 全体表示なら contain に */
+    }
+}
 
