@@ -516,4 +516,34 @@ footer p {
     transform: scale(1.1);
 }
 
+/* 1. PC～タブレット向け縦長画像固定 */
+.modal-image-container {
+    flex: 0 0 30%;
+    min-width: 250px; /* 最低横幅を指定して狭すぎないように */
+    height: 400px;
+}
+
+/* 2. 画像を親コンテナの高さに合わせ、横幅は自動 */
+#modal-image {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* 好みで contain に変更も可能 */
+}
+
+/* 3. スマホサイズ（480px以下）でも縦長固定 */
+@media (max-width: 480px) {
+    .modal-image-container {
+        flex: none;
+        width: auto;
+        height: 300px; /* 高さ固定 */
+        min-width: 200px; /* 最低横幅を指定 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+
+    #modal-image {
+        width: auto;
+        height: 100%;
+        object-fit: cover; /* 全体表示なら contain に */
+    }
+}
 
