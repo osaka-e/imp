@@ -36,24 +36,35 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 1rem;
-    padding-top: 200px; /* ← ヘッダーの高さに合わせて調整 */
+    padding-top: 200px;
 }
 
 /* レスポンシブ（768px以下） */
 @media (max-width: 768px) {
     main {
         padding: 2rem 1rem;
-        padding-top: 70px; /* ← こちらも調整 */
+        padding-top: 70px;/
     }
 }
 
 /* レスポンシブ（480px以下） */
 @media (max-width: 480px) {
+    header {
+        padding: 0; 
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     main {
-        padding: 1.5rem 0.5rem;
-        padding-top: 60px; /* ← よりコンパクトに */
+        padding-top: 100px;
+    }
+    .logo img {
+        width: 40px;
+        height: 40px;
     }
 }
+
 
 /* ギャラリー */
 .gallery {
